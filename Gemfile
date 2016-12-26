@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Authentication gem
 gem 'devise', '~> 4.2'
+
+# Styling gem (add Bootstrap to project)
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
