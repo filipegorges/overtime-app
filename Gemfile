@@ -54,9 +54,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom Gems
 # Authentication gem
 gem 'devise', '~> 4.2'
-
 # Styling gem (add Bootstrap to project)
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
-
 # Growl-like notifications
 gem 'gritter', '~> 1.2'
+# Admin panel
+gem 'administrate', '~> 0.3.0'
+gem 'bourbon', '~> 4.2', '>= 4.2.7'
