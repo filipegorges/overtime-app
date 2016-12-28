@@ -11,6 +11,7 @@ class AdminUserDashboard < Administrate::BaseDashboard
     posts: Field::HasMany,
     id: Field::Number,
     email: Field::String,
+    password: Field::String,
     encrypted_password: Field::String,
     reset_password_token: Field::String,
     reset_password_sent_at: Field::DateTime,
@@ -36,7 +37,6 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
-    :encrypted_password,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -45,10 +45,6 @@ class AdminUserDashboard < Administrate::BaseDashboard
     :posts,
     :id,
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
     :sign_in_count,
     :current_sign_in_at,
     :last_sign_in_at,
@@ -65,17 +61,8 @@ class AdminUserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :posts,
     :email,
-    :encrypted_password,
-    :reset_password_token,
-    :reset_password_sent_at,
-    :remember_created_at,
-    :sign_in_count,
-    :current_sign_in_at,
-    :last_sign_in_at,
-    :current_sign_in_ip,
-    :last_sign_in_ip,
+    :password,
     :first_name,
     :last_name,
     :type,
