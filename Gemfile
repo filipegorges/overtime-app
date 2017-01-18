@@ -61,3 +61,5 @@ gem 'gritter', '~> 1.2'
 # Admin panel
 gem 'administrate', '~> 0.3.0'
 gem 'bourbon', '~> 4.2', '>= 4.2.7'
+# Authorization gem
+gem 'pundit', '~> 1.1'
