@@ -1,0 +1,31 @@
+version: '3'
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: rails s -b 0.0.0.0 -p 3000
+    volumes:
+      - C:\users\workspace\overtime-app:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  test:
+    build: .
+    command: rspec
+    volumes:
+      - C:\users\workspace\overtime-app:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+  bash:
+    build: .
+    command: /bin/bash
+    volumes:
+      - C:\users\workspace\overtime-app:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
